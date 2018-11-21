@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <form class="form-inline">
+    <ul>
+      <li><h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4></li>
+    </ul>
+  </form>
+<% end %>
+
+<br>
+<p><%= link_to " + Add New Restaurat", new_restaurant_path %></p>
